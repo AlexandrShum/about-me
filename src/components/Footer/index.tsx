@@ -1,6 +1,8 @@
-"use client"
+"use client";
 import React, { FC } from "react";
 import { Box, Typography, useTheme } from "@mui/material";
+
+import { SocialMediaLinks } from "./SocialMedia";
 
 const Footer: FC = () => {
   const theme = useTheme();
@@ -13,10 +15,12 @@ const Footer: FC = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-      }}>
-        <Typography sx={{ color: theme.palette.text.secondary}}>
-          {"© 2023 Alexandr Shumakov"}
-        </Typography>
+      }}
+    >
+      <SocialMediaLinks />
+      <Typography sx={{ color: theme.palette.text.secondary }}>
+        {"© 2023 Alexandr Shumakov"}
+      </Typography>
     </Box>
   );
 };
